@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Tshop</title>
+
+    <!-- Bootstrap core CSS -->    
+    <link rel="stylesheet" type="text/css" href="css/carousal.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <style type="text/css">
+    .navbar-custom{
+      background: #54C581;
+      color: #fff;
+      font-family: arial;
+      font-weight: bold;
+    }
+    .navbar-custom .navbar-nav > li > a{
+      color: #fff;
+    }
+    .navbar-custom .navbar-nav > .active > a{
+      background: #30AD63;
+    }
+    .navbar-custom .navbar-nav > li > a:hover{
+      background: #30AD63;
+      background-color: #30AD63
+    }    
+    .navbar-top>li>a{
+      padding: 5px;
+    }
+    .banner-holder{
+      height: 300px;
+      background: #fff;
+      border: 2px solid #fff;
+      box-shadow:0 0 2px 0 #d3cbb8;
+      text-align: center;
+      font-family: arial;
+    }  
+    .img-loc{
+      text-align: center;
+      height: 150px;
+      max-height: 150px;
+      padding-top: 5px;
+    }  
+    .img-loc > img{
+      height: 100%
+    }
+    .pad-custom{
+      padding-top: 1px;
+      padding-bottom: 4px;
+    }
+    .price{
+      font-weight: bold;
+    }
+    .adv-placeholder{
+      padding-top: 20px;
+      height: 200px;
+      width:100%;
+    }
+    .adv-placeholder > img{
+      max-height: 200px;
+      width: 100%;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    
+
+    
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
+      <div style="height:30px; background:#30AD63;width:100%">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-top">
+          <li><a href="#">HELP</a></li>
+          <li><a href="#">88 01680 53 1352</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-top">
+          <li><a href="#">MY ACCOUNT</a></li>
+          <li><a href="#">SIGN IN</a></li>
+          <li><a href="#">CREATE ACCOUNT</a></li>
+          </ul>
+        </div>        
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TSHOP</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">HOME</a></li>
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">NEW PRODUCTS <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SHOP <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">CART <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+          </ul>
+          
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+   <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/download.gif" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1> ////IMAGE </h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/download.gif" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/download.gif" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+    <div class="newarrivals">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img1.jpg">
+              </div>
+              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img2.jpg">
+              </div>
+              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img3.jpg">
+              </div>
+              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img4.jpg">
+              </div>
+              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="adv-placeholder">
+          <img src="img/img1.jpg" alt="Second slide">          
+    </div>
+
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
