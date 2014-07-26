@@ -13,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->    
     <link rel="stylesheet" type="text/css" href="css/carousal.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
@@ -23,9 +23,18 @@
       color: #fff;
       font-family: arial;
       font-weight: bold;
+      border: none;
+    }
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover{
+      color: #fff;
+      background-color: #30AD63;
+    }
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+      color: #fff;
+      background-color: #30AD63;
     }
     .navbar-custom .navbar-nav > li > a{
-      color: #fff;
+      color: #fff;      
     }
     .navbar-custom .navbar-nav > .active > a{
       background: #30AD63;
@@ -35,7 +44,7 @@
       background-color: #30AD63
     }    
     .navbar-top>li>a{
-      padding: 5px;
+      padding: 5px 10px;
     }
     .banner-holder{
       height: 300px;
@@ -44,7 +53,8 @@
       box-shadow:0 0 2px 0 #d3cbb8;
       text-align: center;
       font-family: arial;
-    }  
+      /*text-shadow: 0 1px 2px rgba(0, 0, 0, .6);*/
+    }      
     .img-loc{
       text-align: center;
       height: 150px;
@@ -63,12 +73,109 @@
     }
     .adv-placeholder{
       padding-top: 20px;
+      padding-bottom: 20px;
       height: 200px;
       width:100%;
-    }
+    }   
     .adv-placeholder > img{
       max-height: 200px;
       width: 100%;
+    }
+    .pad-space,.load-products{
+      padding: 7.5px;
+      text-align: center;      
+    }
+    .col-holder{
+      height: 104px;
+      background: #fff;
+      border: 2px solid #fff;
+      box-shadow:0 0 2px 0 #d3cbb8;            
+    } 
+    .collections, .brands{
+      padding: 7.5px;
+    } 
+    .col-holder > .img-loc > img{
+      max-height: 100px;
+      width: 100%;      
+    }
+    .col-holder > .img-loc{
+      max-height: 100px;
+      padding-top: 0px;
+    }
+    .brand-holder > .img-loc > img{
+      max-height: 75px;
+      width: 100%;
+    }
+    .brand-holder > .img-loc{
+      max-height: 75px;
+      padding-top: 0px;
+    } 
+    .brand-text{
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 5px;
+      /*text-shadow: 0 1px 2px rgba(0, 0, 0, .6);*/
+    }     
+    .newarrivals-text{      
+      padding-bottom: 10px;      
+      text-align: center;
+    }
+    .brand-img{
+      list-style: none;
+      padding: 0;
+      float: left;
+      margin: 0;
+      width: 100%;
+    }
+    .line:before{
+      background-image: -webkit-gradient(linear, right top, left top, from(#777), to(#fff));
+      background-image: -webkit-linear-gradient(right, #777, #fff);
+      background-image: -moz-linear-gradient(right, #777, #fff);
+      background-image: -ms-linear-gradient(right, #777, #fff);
+      background-image: -o-linear-gradient(right, #777, #fff);
+      background-image: linear-gradient(right, #777, #fff);
+      left: 0;
+    }    
+    .brand-img li{
+      display: inline-block;
+      height: 80px;
+      width: 12%;
+      padding: 10px;
+    }
+    .brand-img li img{
+      height: 100%;
+      width: 100%;
+    }
+    .footer-info ul{
+      padding-left: 0;
+      list-style: none;      
+      color: gray;
+    }
+    .marg-line{
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;        
+      font-weight: 700;  
+      color: gray;
+    }
+    .brand-desc{
+      color: gray;
+      font-size: 12px;
+    }
+    .offers{
+      position: absolute;
+      right: 15%;
+      bottom: 20px;
+      left: 15%;
+      z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    }
+    .footer-last{
+      padding-top: 5px;
+      background-color: gray;
     }
     </style>
 
@@ -78,8 +185,9 @@
     
 
     
-    <div class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">      
       <div style="height:30px; background:#30AD63;width:100%">
+        <div class="wrapper">
         <div class="container">
           <ul class="nav navbar-nav navbar-top">
           <li><a href="#">HELP</a></li>
@@ -157,6 +265,7 @@
           
         </div><!--/.navbar-collapse -->
       </div>
+      </div>
     </div>
 
    <!-- Carousel
@@ -173,7 +282,7 @@
           <img src="img/download.gif" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1> ////IMAGE </h1>
+              <h1> IMAGE </h1>
             </div>
           </div>
         </div>
@@ -201,16 +310,18 @@
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
-
-    <div class="newarrivals">
+    <div class="newarrivals-text">
+      <p style="font-size:larger">NEW ARRIVALS</p>
+    </div>
+    <div class="newarrivals-products">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="banner-holder">
               <div class="img-loc">
                 <img src="img/img1.jpg">
               </div>
-              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
               <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
               <div class="summary pad-custom">
                 <div class="sizes">XL/ XXL/ S</div>
@@ -219,12 +330,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="banner-holder">
               <div class="img-loc">
                 <img src="img/img2.jpg">
               </div>
-              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
               <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
               <div class="summary pad-custom">
                 <div class="sizes">XL/ XXL/ S</div>
@@ -233,12 +344,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="banner-holder">
               <div class="img-loc">
                 <img src="img/img3.jpg">
               </div>
-              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
               <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
               <div class="summary pad-custom">
                 <div class="sizes">XL/ XXL/ S</div>
@@ -247,12 +358,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="banner-holder">
               <div class="img-loc">
                 <img src="img/img4.jpg">
               </div>
-              <div class="dress-name pad-custom">U.S. Polo Assn.</div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
               <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
               <div class="summary pad-custom">
                 <div class="sizes">XL/ XXL/ S</div>
@@ -265,9 +376,349 @@
       </div>
     </div>
     
-    <div class="adv-placeholder">
-          <img src="img/img1.jpg" alt="Second slide">          
+    <div class="products-text">
+
     </div>
+    <div class="adv-placeholder">
+      <img src="img/image3.gif" alt="Second slide">
+       <!--<div class="container">
+          <div class="offers">
+            <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>          
+        </div>  -->
+    </div>
+    
+    <div class="products-text" style="text-align:center;padding-top:50px;padding-bottom:30px;">
+      <p class="line" style="font-size:larger">FEATURES PRODUCT</p>      
+    </div>
+
+   <div class="products">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img1.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img2.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img3.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img4.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pad-space"></div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img1.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img2.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img3.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img4.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pad-space"></div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img1.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img2.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img3.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="banner-holder">
+              <div class="img-loc">
+                <img src="img/img4.jpg">
+              </div>
+              <div class="dress-name pad-custom">DUIS DOLORE</div>
+              <div class="brand-desc pad-custom">This is made by U.S. Polo</div>
+              <div class="summary pad-custom">
+                <div class="sizes">XL/ XXL/ S</div>
+                <div class="price">$25</div>
+                <button type="button" class="btn btn-success">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pad-space"></div>
+    </div>
+   </div>
+
+   <div class="load-products">
+    <button type="button" class="btn btn-default" style="text-shadow: 0 1px 2px rgba(0, 0, 0, .8);">+load more products</button>
+   </div> 
+
+   <div class="collections">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="col-holder">
+            <div class="img-loc">
+                    <img src="img/small2.gif">
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="col-holder">
+            <div class="img-loc">
+                    <img src="img/small2.gif">
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="col-holder">
+            <div class="img-loc">
+                    <img src="img/small2.gif">
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="col-holder">
+            <div class="img-loc">
+                    <img src="img/small2.gif">
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="brands">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="brand-text">BRAND</p>          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 brand-container">
+          <ul class="brand-img">
+            <li style="padding-left:0"> <img src="img/small.gif"> </li>
+            <li> <img src="img/small.gif"> </li>
+            <li> <img src="img/small.gif"> </li>
+            <li> <img src="img/small.gif"> </li>
+            <li> <img src="img/small.gif"> </li>
+            <li> <img src="img/small.gif"> </li>
+            <li> <img src="img/small.gif"> </li>
+            <li style="padding-right:0"> <img src="img/small.gif"> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="adv-placeholder">
+          <img src="img/down1.gif" alt="Second slide">          
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-info">
+              <p class="marg-line support-text">SUPPORT</p>
+              <ul class="support-info">
+                <li>Lorem ipsum dolor sit amet, consectuter</li>
+                <li>88 01680 531352</li>
+                <li>help@tshopweb.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-info">
+              <p class="marg-line shop-text">SHOP</p>
+              <ul class="shop-info">
+                <li>Home</li>
+                <li>Category</li>
+                <li>Sub Category</li>
+                <li>Product Details</li>
+                <li>Product Details Version 2</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-info">
+              <p class="marg-line shop-text">INFORMATION</p>
+              <ul class="inf-info">
+                <li>Cart</li>
+                <li>About us</li>
+                <li>About us 2</li>
+                <li>Contact us</li>
+                <li>Contact us 2</li>
+                <li>Terms & Conditions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+             <div class="footer-info">
+              <p class="marg-line shop-text">MY ACCOUNT</p>
+              <ul class="inf-info">
+                <li>Account Login</li>
+                <li>My Account</li>
+                <li>My Address</li>
+                <li>Wish list </li>
+                <li>Order list</li>                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footer-info">
+              <p class="marg-line shop-text">STAY IN TOUCH</p>
+              <ul class="inf-info">
+                <li>Account Login</li>
+                <li>My Account</li>
+                <li>My Address</li>
+                <li>Wish list </li>
+                <li>Order list</li>                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-last">copyright</div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-last" style="text-align:right">
+              credit cards
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     
 
@@ -276,6 +727,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
